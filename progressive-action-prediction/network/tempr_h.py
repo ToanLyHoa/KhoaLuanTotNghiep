@@ -87,6 +87,7 @@ class Attention(nn.Module):
         self.heads = heads
         self.temp = 2.0
 
+        # Q = latten_araray*Matrix_Q
         self.to_q = nn.Linear(query_dim, inner_dim, bias = False)
         self.to_kv = nn.Linear(context_dim, inner_dim * 2, bias = False)
 
